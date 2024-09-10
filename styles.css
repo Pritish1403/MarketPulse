@@ -1,0 +1,195 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    padding: 20px; /* Added padding for safe area */
+    box-sizing: border-box; /* Include padding in the width/height calculation */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px; /* Reduced padding */
+    border-radius: 15px; /* Slightly reduced border-radius */
+    backdrop-filter: blur(8px); /* Reduced blur effect */
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Reduced max-width */
+    color: #fff;
+    box-sizing: border-box; /* Ensure padding and borders are included in the width/height */
+}
+
+h1 {
+    font-size: 24px; /* Reduced font size */
+    font-weight: 700;
+    margin-bottom: 20px; /* Reduced margin */
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Reduced margin */
+    align-items: center;
+}
+
+#stock-name-input {
+    width: 100%;
+    padding: 10px 12px; /* Reduced padding */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px; /* Reduced border-radius */
+    font-size: 14px; /* Reduced font size */
+    margin-bottom: 10px; /* Reduced margin */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+#stock-name-input:focus {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+button {
+    padding: 10px 18px; /* Reduced padding */
+    border: none;
+    border-radius: 20px; /* Reduced border-radius */
+    background-color: #ff6b6b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px; /* Reduced font size */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+button:hover {
+    background-color: #ff4757;
+    transform: scale(1.03); /* Reduced scale effect */
+}
+
+.loader {
+    border: 6px solid rgba(255, 255, 255, 0.1); /* Reduced border width */
+    border-radius: 50%;
+    border-top: 6px solid #fff; /* Reduced border width */
+    width: 40px; /* Reduced size */
+    height: 40px; /* Reduced size */
+    margin: 15px auto; /* Reduced margin */
+    animation: spin 1s linear infinite;
+    display: none; /* Hidden by default */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.stock-info {
+    margin-top: 15px; /* Reduced margin */
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px; /* Reduced padding */
+    border-radius: 12px; /* Reduced border-radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
+    box-sizing: border-box; /* Include padding in the width/height calculation */
+}
+
+#company-name {
+    font-size: 18px; /* Reduced font size */
+    color: #ffd700;
+    margin-bottom: 8px; /* Reduced margin */
+    font-weight: 500;
+}
+
+#company-profile {
+    font-size: 12px; /* Reduced font size */
+    color: #e0e0e0;
+    margin-bottom: 15px; /* Reduced margin */
+    line-height: 1.4; /* Adjusted line-height */
+}
+
+.price-info {
+    font-size: 14px; /* Reduced font size */
+    color: #fff;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.price-info p {
+    margin: 4px 0; /* Reduced margin */
+}
+
+#industry {
+    font-size: 12px; /* Reduced font size */
+    color: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduced padding */
+    }
+
+    #stock-name-input {
+        padding: 8px;
+        font-size: 13px; /* Reduced font size */
+    }
+
+    button {
+        padding: 8px 14px; /* Reduced padding */
+        font-size: 13px; /* Reduced font size */
+    }
+
+    .stock-info {
+        padding: 12px; /* Reduced padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 10px; /* Reduced padding */
+    }
+
+    #stock-name-input {
+        padding: 8px;
+        font-size: 12px; /* Reduced font size */
+    }
+
+    button {
+        padding: 8px 12px; /* Reduced padding */
+        font-size: 12px; /* Reduced font size */
+        width: 100%;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    #stock-name-input {
+        margin-bottom: 8px; /* Reduced margin */
+    }
+
+    .stock-info {
+        padding: 10px; /* Reduced padding */
+    }
+
+    #company-name {
+        font-size: 16px; /* Reduced font size */
+    }
+
+    #company-profile {
+        font-size: 11px; /* Reduced font size */
+    }
+
+    .price-info p {
+        font-size: 12px; /* Reduced font size */
+    }
+}
